@@ -1,1 +1,13 @@
 baseurl: /jekyll_demo
+
+# jekyll-paginate配置
+paginate: 10
+
+plugins:
+  - jekyll-paginate
+exclude:
+  - Gemfile
+  - Gemfile.lock	
+include: ["_pages"]
+permalink: /posts/:title/
+excerpt_separator: <!--more-->
