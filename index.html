@@ -4,37 +4,40 @@ title: kanxinqing147's Blog
 ---
 
 <main>
-<div class="wrapMin">
-    <section class="homeTitle">
-        <h1>{{ page.title }}</h1>
-        <p>个人笔记 - 记录一些技巧，学习笔记，个人总结</p>
-    </section>
-    <section class="homePosts">
-        {% for post in site.posts %}
-        <div class="postitem">
-            <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-            <p>{{ post.excerpt | strip_html}}</p>
-            <div class="postMeta">
-                <span class="date"><b>更新时间：</b>{{ post.date | date: '%Y-%m-%d' }}</span>
-                {% for tag in post.tags %}
-                <span class="tag"><b>Tag：</b><a href="/tags/#{{ tag | slugify }}">{{ tag }}</a></span>
-                {% endfor %}
+    <div class="wrapMin">
+        <section class="homeTitle">
+            <h1>{{ page.title }}</h1>
+            <p>个人笔记 - 记录一些技巧，学习笔记，个人总结</p>
+        </section>
+        <section class="homePosts">
+            {% for post in site.posts %}
+            <div class="postitem">
+                <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+                <p>{{ post.excerpt | strip_html}}</p>
+                <div class="postMeta">
+                    <span class="date"><b>更新时间：</b>{{ post.date | date: '%Y-%m-%d' }}</span>
+                    <span class="tag">
+                        <b>Tag：</b>
+                        {% for tag in post.tags %}
+                        <a href="/tags/#{{ tag | slugify }}">{{ tag }}</a>&nbsp;
+                        {% endfor %}
+                    </span>
+                </div>
             </div>
-        </div>
-        {% endfor %}
-    </section>
-    <section class="pageNavigator">
-        {% if paginator.previous_page %}
+            {% endfor %}
+        </section>
+        <section class="pageNavigator">
+            {% if paginator.previous_page %}
             <a href="{{ paginator.previous_page_path }}">上一页</a>
-        {% else %}
+            {% else %}
             <span>上一页</span>
-        {% endif %}
-        <span> | {{ paginator.page }} / {{ paginator.total_pages }} | </span>
-        {% if paginator.next_page %}
+            {% endif %}
+            <span> | {{ paginator.page }} / {{ paginator.total_pages }} | </span>
+            {% if paginator.next_page %}
             <a href="{{ paginator.next_page_path }}">下一页</a>
-        {% else %}
+            {% else %}
             <span>下一页</span>
-        {% endif %}
-    </section>
-</div>    
+            {% endif %}
+        </section>
+    </div>
 </main>

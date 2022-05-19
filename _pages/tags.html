@@ -1,0 +1,56 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+---
+
+{% comment%}
+Here we generate all the tags.
+{% endcomment%}
+
+{% assign rawtags = "" %}
+{% for post in site.posts %}
+{% assign ttags = post.tags | join:'|' | append:'|' %}
+{% assign rawtags = rawtags | append:ttags %}
+{% endfor %}
+
+{% assign rawtags = rawtags | split:'|' | sort %}
+
+{% assign tags = "" %}
+
+{% for tag in rawtags %}
+{% if tag != "" %}
+
+{% if tags == "" %}
+{% assign tags = tag | split:'|' %}
+{% endif %}
+
+{% unless tags contains tag %}
+{% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+{% endunless %}
+{% endif %}
+{% endfor %}
+
+<main>
+    <div class="wrapMin">
+        <section class="postTitle">
+            <h2>分类</h2>
+        </section>
+        <section class="postContent">
+            {% for tag in tags %}
+            <h4 id="{{ tag | slugify }}">{{ tag }}</h4>
+            <ul>
+                {% for post in site.posts %}
+                {% if post.tags contains tag %}
+                <li>
+                    <a href="{{ site.baseurl }}/{{ post.url }}">
+                        {{ post.title }}
+                    </a>
+                </li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+            {% endfor %}
+        </section>
+    </div>
+</main>
