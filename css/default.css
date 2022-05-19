@@ -65,16 +65,16 @@ a{
 /*
     对文章内容页面进行样式化
 */
-.postTitle{
+.pageTitle{
     margin-bottom: 1em;
     padding-bottom: 1em;
     border-bottom: 1px solid #ddd;
 }
 
-.postTitle h2{
+.pageTitle h2{
     color: #6e8aad;
 }
 
-.postContent{
+.pageContent{
     margin-bottom: 3em;
 }

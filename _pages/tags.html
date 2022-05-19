@@ -33,10 +33,10 @@ Here we generate all the tags.
 
 <main>
     <div class="wrapMin">
-        <section class="postTitle">
+        <section class="pageTitle">
             <h2>分类</h2>
         </section>
-        <section class="postContent">
+        <section class="pageContent">
             {% for tag in tags %}
             <h4 id="{{ tag | slugify }}">{{ tag }}</h4>
             <ul>

@@ -14,7 +14,7 @@
 
     <main>
         <div class="wrapMin">
-            <section class="postTitle">
+            <section class="pageTitle">
                 <h2>{{ page.title }}</h2>
                 <div class="postMeta">
                     <span class="date"><b>更新时间：</b>{{ page.date | date: '%Y-%m-%d' }}</span>
@@ -23,10 +23,10 @@
                     {% endfor %}
                 </div>
             </section>
-            <section class="postContent">
+            <section class="pageContent">
                 {{ content }}
             </section>
-            <section class="postNear">
+            <section class="pageNear">
                 <ul>
                     <li>
                         上一篇：
