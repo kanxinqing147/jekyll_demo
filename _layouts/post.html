@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/default.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/header.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/footer.css">
+    <title>{{ papg.title }}</title>
+</head>
+
+<body>
+    {% include header.html %}
+
+    <main>
+        <div class="wrapMin">
+            <section class="postTitle">
+                <h2>{{ page.title }}</h2>
+                <div class="postMeta">
+                    <span class="date"><b>更新时间：</b>{{ page.date | date: '%Y-%m-%d' }}</span>
+                    {% for tag in page.tags %}
+                    <span class="tag"><b>Tag：</b><a href="/tags/#{{ tag | slugify }}">{{ tag }}</a></span>
+                    {% endfor %}
+                </div>
+            </section>
+            <section class="postContent">
+                {{ content }}
+            </section>
+            <section class="postNear">
+                <ul>
+                    <li>
+                        上一篇：
+                        {% if page.previous %}
+                            {{ page.previous }}
+                        {% else %}
+                            看完啦 (つд⊂)
+                        {% endif %}
+                    </li>
+                    <li>
+                        下一篇：
+                        {% if page.next %}
+                            {{ page.next }}
+                        {% else %}
+                            看完啦 (つд⊂)
+                        {% endif %}
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    {% include footer.html %}
+</body>
+
+</html>
