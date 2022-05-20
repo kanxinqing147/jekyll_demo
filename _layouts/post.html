@@ -18,20 +18,23 @@
                 <h2>{{ page.title }}</h2>
                 <div class="postMeta">
                     <span class="date"><b>更新时间：</b>{{ page.date | date: '%Y-%m-%d' }}</span>
-                    {% for tag in page.tags %}
-                    <span class="tag"><b>Tag：</b><a href="/tags/#{{ tag | slugify }}">{{ tag }}</a></span>
-                    {% endfor %}
+                    <span class="tag">
+                        <b>Tag：</b>
+                        {% for tag in page.tags %}
+                        <a href="/tags/#{{ tag | slugify }}">{{ tag }}</a>&nbsp;
+                        {% endfor %}
+                    </span>
                 </div>
             </section>
-            <section class="pageContent">
+            <article class="pageContent">
                 {{ content }}
-            </section>
+            </article>
             <section class="pageNear">
                 <ul>
                     <li>
                         上一篇：
                         {% if page.previous %}
-                            {{ page.previous }}
+                            <a href="{{ site.baseurl }}/{{ page.previous.url }}">{{ page.previous.title }}</a>
                         {% else %}
                             看完啦 (つд⊂)
                         {% endif %}
@@ -39,7 +42,7 @@
                     <li>
                         下一篇：
                         {% if page.next %}
-                            {{ page.next }}
+                            <a href="{{ site.baseurl }}/{{ page.next.url }}">{{ page.next.title }}</a>
                         {% else %}
                             看完啦 (つд⊂)
                         {% endif %}

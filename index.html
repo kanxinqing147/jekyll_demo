@@ -10,7 +10,7 @@ title: kanxinqing147's Blog
             <p>个人笔记 - 记录一些技巧，学习笔记，个人总结</p>
         </section>
         <section class="homePosts">
-            {% for post in site.posts %}
+            {% for post in paginator.posts %}
             <div class="postitem">
                 <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
                 <p>{{ post.excerpt | strip_html}}</p>
@@ -28,13 +28,13 @@ title: kanxinqing147's Blog
         </section>
         <section class="pageNavigator">
             {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path }}">上一页</a>
+            <a href="{{ site.baseurl }}{{ paginator.previous_page_path }}">上一页</a>
             {% else %}
             <span>上一页</span>
             {% endif %}
             <span> | {{ paginator.page }} / {{ paginator.total_pages }} | </span>
             {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path }}">下一页</a>
+            <a href="{{ site.baseurl }}{{ paginator.next_page_path }}">下一页</a>
             {% else %}
             <span>下一页</span>
             {% endif %}

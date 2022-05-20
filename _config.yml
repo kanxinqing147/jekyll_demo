@@ -1,7 +1,7 @@
 baseurl: /jekyll_demo
 
 # jekyll-paginate配置
-paginate: 10
+paginate: 5
 
 plugins:
   - jekyll-paginate

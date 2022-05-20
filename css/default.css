@@ -2,55 +2,101 @@ html {
     font-family: "Microsoft Yahei", "PingFang SC", "Hiragino Sans GB", sans-serif;
 }
 
-body{
-    color:#555;
+body {
+    color: #555;
     font-weight: 300;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: normal;
     margin-bottom: 1rem;
 }
 
-a{
-    color:#6f9fc7;
+p{
+    line-height: 1.8;
+}
+
+a {
+    color: #6f9fc7;
     text-decoration: none;
+}
+
+article{
+    word-break: break-all;
+    letter-spacing: 0.03em;
+}
+
+article>* {
+    margin-bottom: 1em;
+}
+
+article h1,
+article h2,
+article h3 {
+    margin-top: 3rem;
+    font-size: 1.2em;
+}
+
+article h1::before{
+    font-weight: bold;
+}
+
+pre {
+    overflow: auto;
+    padding: 1em;
+    color: black;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+}
+
+pre,
+code {
+    font-family: 'Consolas', 'Courier New', monospace, "微软雅黑";
+}
+
+pre>code {
+    white-space: pre-wrap;
 }
 
 /*
     对首页进行样式化
 */
-.wrapMin{
+.wrapMin {
     max-width: 800px;
-    margin:0 auto 0 auto;
+    margin: 0 auto 0 auto;
     padding: 0 1.25em 0 1.25em;
     box-sizing: content-box;
 }
 
-.homeTitle{
+.homeTitle {
     text-align: center;
     margin-bottom: 3em;
 }
 
-.homeTitle h1{
+.homeTitle h1 {
     font-size: 2em;
-    color:#6e8aad;
+    color: #6e8aad;
 }
 
-.homeTitle p{
+.homeTitle p {
     font-style: italic;
 }
 
-.homePosts{
+.homePosts {
     display: flex;
     flex-direction: column;
 }
 
-.postitem{
+.postitem {
     margin-bottom: 3em;
 }
 
-.postitem h2 a{
+.postitem h2 a {
     line-height: 2em;
     padding-bottom: 0.3rem;
     border-bottom-width: 2px;
@@ -58,23 +104,23 @@ a{
     border-bottom-color: #eee;
 }
 
-.postMeta span{
+.postMeta span {
     margin-right: 0.8em;
 }
 
 /*
     对文章内容页面进行样式化
 */
-.pageTitle{
+.pageTitle {
     margin-bottom: 1em;
     padding-bottom: 1em;
     border-bottom: 1px solid #ddd;
 }
 
-.pageTitle h2{
+.pageTitle h2 {
     color: #6e8aad;
 }
 
-.pageContent{
+.pageContent {
     margin-bottom: 3em;
 }
