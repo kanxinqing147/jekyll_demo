@@ -17,7 +17,7 @@ h6 {
     margin-bottom: 1rem;
 }
 
-p{
+p {
     line-height: 1.8;
 }
 
@@ -26,7 +26,15 @@ a {
     text-decoration: none;
 }
 
-article{
+img,
+svg,
+audio,
+video {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+article {
     word-break: break-all;
     letter-spacing: 0.03em;
 }
@@ -42,7 +50,15 @@ article h3 {
     font-size: 1.2em;
 }
 
-article h1::before{
+article h1:before,
+article h2:before,
+article h3:before {
+    content: "#";
+    color: #6f9fc7;
+    margin-right: 0.5em;
+}
+
+article h1::before {
     font-weight: bold;
 }
 
@@ -61,6 +77,11 @@ code {
 
 pre>code {
     white-space: pre-wrap;
+}
+
+blockquote{
+    background: #ecf1f5;
+    background-color: #6f9fc7;
 }
 
 /*
