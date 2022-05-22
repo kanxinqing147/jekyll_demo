@@ -6,11 +6,8 @@ header {
 .navbar {
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid #ddd;
-}
-
-.navbar nav{
     padding: 0.6em 0 0.6em 0;
+    border-bottom: 1px solid #ddd;
 }
 
 .navbar a{
