@@ -9,14 +9,13 @@ header {
     border-bottom: 1px solid #ddd;
 }
 
-.navbar li{
-    display: inline;
+.navbar nav{
     padding: 0.6em 0 0.6em 0;
-    margin-right: 1em;
 }
 
 .navbar a{
     color: inherit;
+    margin-right: 1em;
 }
 
 .navbar a:hover {
