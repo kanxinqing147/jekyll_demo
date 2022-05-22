@@ -75,10 +75,6 @@ code {
     font-family: 'Consolas', 'Courier New', monospace, "微软雅黑";
 }
 
-pre>code {
-    white-space: pre-wrap;
-}
-
 blockquote{
     background: #ecf1f5;
     background-color: #6f9fc7;
