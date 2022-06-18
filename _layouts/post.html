@@ -34,17 +34,17 @@
                     <li>
                         上一篇：
                         {% if page.previous %}
-                            <a href="{{ site.baseurl }}/{{ page.previous.url }}">{{ page.previous.title }}</a>
+                        <a href="{{ site.baseurl }}/{{ page.previous.url }}">{{ page.previous.title }}</a>
                         {% else %}
-                            看完啦 (つд⊂)
+                        看完啦 (つд⊂)
                         {% endif %}
                     </li>
                     <li>
                         下一篇：
                         {% if page.next %}
-                            <a href="{{ site.baseurl }}/{{ page.next.url }}">{{ page.next.title }}</a>
+                        <a href="{{ site.baseurl }}/{{ page.next.url }}">{{ page.next.title }}</a>
                         {% else %}
-                            看完啦 (つд⊂)
+                        看完啦 (つд⊂)
                         {% endif %}
                     </li>
                 </ul>
@@ -53,7 +53,10 @@
     </main>
 
     {% include footer.html %}
-    <script type="text/x-mathjax-config">
+
+</body>
+
+<script type="text/x-mathjax-config">
         MathJax.Hub.Config({
             tex2jax: {
             skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
@@ -61,7 +64,6 @@
             }
         });
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
-</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
 
 </html>
