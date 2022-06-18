@@ -117,9 +117,7 @@ blockquote{
 .postitem h2 a {
     line-height: 2em;
     padding-bottom: 0.3rem;
-    border-bottom-width: 2px;
-    border-bottom-style: solid;
-    border-bottom-color: #eee;
+    border-bottom: 2px solid #eee;
 }
 
 .postMeta span {
