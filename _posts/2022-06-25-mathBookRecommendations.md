@@ -1,6 +1,6 @@
 ---  
 layout: post  
-title: 生活中神奇的数学（一）  
+title: 数学好书推荐 
 tags: Math  
 ---  
   
